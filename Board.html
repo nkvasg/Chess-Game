@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chess Game</title>
+	<link rel='stylesheet' href='chess.css'/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src='chess.js'></script>
+  </head>
+  <body>
+    <div id='master'>
+        
+        <div id='side-container' style='display:inline-block;'>
+          <!-- Shows eaten pieces-->
+          <div id='display'>
+            <div id='eaten-white' style='display:inline-block'></div>
+            <div id='eaten-black' style='display:inline-block'></div>
+          </div>
+          <br>
+          <!-- Special messages, such as 'check'-->
+          <div id='display'>
+            <p id='message1' class='message'></p>
+            <p id='message2' class='message'></p>
+            <p id='message3' class='message'></p>
+          </div>
+        </div>
+        
+        <!-- Includes the game as 3 layers of canvas -->
+        <div id='game-window'>
+          <canvas id='board-box' style="position:absolute; z-index:0; left:26px;"></canvas>
+          <canvas id='pieces-box' style="position:absolute; z-index:1; left:26px;"></canvas>
+          <canvas id='piece-cursor' style="position:absolute; z-index:2; left:26px;"></canvas>
+        </div>
+        
+        <!-- Options and game information -->
+        <div id='menu-window'>
+          <h3 style='margin-top:15px;'>Start a new game:</h3>
+          <div id='new-game' class='button'>Normal</div>
+          <div id='new-stratomic-game' class='button'>Stratomic</div>
+          <br>
+          <div id='new-loser-game' class='button'>Loser</div>
+          <div id='new-double-game' class='button'>Double</div>
+          <div id='scroll-box'></div>
+          <div id='undo' class='disabled-button' style="width:36px;">undo</div>
+          <br>
+          <div id='goToStart' class='disabled-button'>Go to start</div>
+          <div id='previous' class='disabled-button' style="width:22px"></div>
+          <div id='next' class='disabled-button' style="width:22px"></div>
+          <br>
+          <div id='goToLast' class='disabled-button'>Go to last</div>
+          <div id='freeMode' class='disabled-button'>Free mode</div>
+          
+        </div>
+        
+    </div> <!-- End of master-->
+  </body>
+</html>
